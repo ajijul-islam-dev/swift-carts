@@ -99,10 +99,10 @@ const CategorySlider = ({ sliderTitle }: { sliderTitle?: string }) => {
 
         {loaded && instanceRef.current && (
           <div className="absolute left-0 w-full top-0 flex items-center justify-between gap-5">
-            <div className="flex items-center justify-center gap-10">
+            <div className="flex items-center justify-center gap-5 md:gap-10">
               <h1 className="text-lg md:text-3xl font-bold">{sliderTitle || "Title"}</h1>
             </div>
-            <div className="flex items-center justify-center gap-5">
+            <div className="flex items-center justify-center gap-2 md:gap-5">
               <Arrow
                 left
                 onClick={(e: any) =>

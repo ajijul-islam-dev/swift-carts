@@ -14,7 +14,7 @@ function ThisMonth() {
           View All
         </Button>
       </div>
-      <div className="grid grid-cols-2 md:grid-cols-4 gap-5">
+      <div className="grid grid-cols-2 md:grid-cols-4 gap-2 md:gap-5">
         <ProductCard/>
         <ProductCard/>
         <ProductCard/>
