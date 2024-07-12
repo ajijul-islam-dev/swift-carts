@@ -55,18 +55,23 @@ function Nav() {
       </NavbarContent>
       <NavbarContent justify="end" className="flex items-center">
         <NavbarItem className="text-2xl">
-        <Input
-          type="email"
-          className="hidden md:flex"
-          placeholder="search here.."
-          endContent={
-            <CiSearch className="text-2xl text-default-400 pointer-events-none flex-shrink-0" />
-          }
-        />
-          <CiSearch className="text-2xl md:hidden" />
+          <Input
+            type="email"
+            className="hidden md:flex"
+            placeholder="search here.."
+            endContent={
+              <CiSearch className="text-2xl text-default-400 pointer-events-none flex-shrink-0" />
+            }
+          />
+
+          <Badge>
+            <CiSearch className="text-2xl md:hidden" />
+          </Badge>
         </NavbarItem>
         <NavbarItem className="text-2xl">
-          <MdFavoriteBorder />
+          <Badge content="0" color="default">
+            <MdFavoriteBorder />
+          </Badge>
         </NavbarItem>
         <NavbarItem>
           <Badge content="0" color="danger">

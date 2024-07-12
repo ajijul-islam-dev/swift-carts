@@ -64,7 +64,7 @@ const Slider = () => {
               width={600}
               height={400}
               alt="slide"
-              className="w-full h-60 md:h-full"
+              className="w-full h-52 md:h-full"
             />
           </div>
           <div className="keen-slider__slide number-slide1">
@@ -73,7 +73,7 @@ const Slider = () => {
               width={600}
               height={400}
               alt="slide"
-              className="w-full h-60 md:h-full"
+              className="w-full h-52 md:h-full"
             />
           </div>
           <div className="keen-slider__slide number-slide1">
@@ -82,7 +82,7 @@ const Slider = () => {
               width={600}
               height={400}
               alt="slide"
-              className="w-full h-60 md:h-full"
+              className="w-full h-52 md:h-full"
             />
           </div>
           <div className="keen-slider__slide number-slide1">
@@ -91,7 +91,7 @@ const Slider = () => {
               width={600}
               height={400}
               alt="slide"
-              className="w-full h-60 md:h-full"
+              className="w-full h-52 md:h-full"
             />
           </div>
         </div>
