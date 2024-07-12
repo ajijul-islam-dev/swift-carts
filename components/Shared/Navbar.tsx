@@ -1,5 +1,7 @@
 "use client";
+import { Badge } from "@nextui-org/badge";
 import { Button } from "@nextui-org/button";
+import { Input } from "@nextui-org/input";
 import {
   Navbar,
   NavbarBrand,
@@ -11,76 +13,72 @@ import {
 } from "@nextui-org/navbar";
 import Link from "next/link";
 import React from "react";
+import { CiSearch, CiShoppingCart } from "react-icons/ci";
+import { MdFavoriteBorder } from "react-icons/md";
 
 function Nav() {
   const [isMenuOpen, setIsMenuOpen] = React.useState(false);
 
   const menuItems = [
-    "Profile",
-    "Dashboard",
-    "Activity",
-    "Analytics",
-    "System",
-    "Deployments",
-    "My Settings",
-    "Team Settings",
-    "Help & Feedback",
-    "Log Out",
+    { label: "Home", path: "/" },
+    { label: "About", path: "/about" },
+    { label: "Contact", path: "/contact" },
+    { label: "Products", path: "/products" },
   ];
   return (
-    <Navbar onMenuOpenChange={setIsMenuOpen} maxWidth="full" className="md:px-10 shadow-md" >
+    <Navbar
+      onMenuOpenChange={setIsMenuOpen}
+      maxWidth="full"
+      className="md:px-10 shadow-md"
+    >
       <NavbarContent>
         <NavbarMenuToggle
           aria-label={isMenuOpen ? "Close menu" : "Open menu"}
           className="sm:hidden"
         />
         <NavbarBrand>
-          <p className="font-bold text-xl"><span>Swift</span><span className="text-red-500">Cart</span></p>
+          <p className="font-bold text-lg">
+            <span>Swift</span>
+            <span className="text-red-500">Cart</span>
+          </p>
         </NavbarBrand>
       </NavbarContent>
 
       <NavbarContent className="hidden sm:flex gap-4" justify="center">
-        <NavbarItem>
-          <Link color="foreground" href="#">
-            Features
-          </Link>
-        </NavbarItem>
-        <NavbarItem isActive>
-          <Link href="#" aria-current="page">
-            Customers
-          </Link>
-        </NavbarItem>
-        <NavbarItem>
-          <Link color="foreground" href="#">
-            Integrations
-          </Link>
-        </NavbarItem>
+        {menuItems.map((item, i) => (
+          <NavbarItem key={i}>
+            <Link color="foreground" href={item.path}>
+              {item.label}
+            </Link>
+          </NavbarItem>
+        ))}
       </NavbarContent>
-      <NavbarContent justify="end">
-        <NavbarItem className="hidden lg:flex">
-          <Link href="#">Login</Link>
+      <NavbarContent justify="end" className="flex items-center">
+        <NavbarItem className="text-2xl">
+        <Input
+          type="email"
+          className="hidden md:flex"
+          placeholder="search here.."
+          endContent={
+            <CiSearch className="text-2xl text-default-400 pointer-events-none flex-shrink-0" />
+          }
+        />
+          <CiSearch className="text-2xl md:hidden" />
+        </NavbarItem>
+        <NavbarItem className="text-2xl">
+          <MdFavoriteBorder />
         </NavbarItem>
         <NavbarItem>
-          <Button as={Link} color="primary" href="#" variant="flat">
-            Sign Up
-          </Button>
+          <Badge content="0" color="danger">
+            <CiShoppingCart className="text-2xl" />
+          </Badge>
         </NavbarItem>
       </NavbarContent>
       <NavbarMenu>
         {menuItems.map((item, index) => (
-          <NavbarMenuItem key={`${item}-${index}`}>
-            <Link
-              color={
-                index === 2
-                  ? "primary"
-                  : index === menuItems.length - 1
-                  ? "danger"
-                  : "foreground"
-              }
-              className="w-full"
-              href="#"
-            >
-              {item}
+          <NavbarMenuItem key={index}>
+            <Link color="foreground" className="w-full" href={item.path}>
+              {item.label}
             </Link>
           </NavbarMenuItem>
         ))}
