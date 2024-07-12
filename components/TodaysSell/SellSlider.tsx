@@ -26,7 +26,7 @@ const SellSlider = ({sliderTitle}:{sliderTitle ? : string}) => {
         setLoaded(true);
       },
       breakpoints: {
-        "(min-width: 400px)": {
+        "(min-width: 768px)": {
           slides: { perView: 3, spacing: 8 },
         },
         "(min-width: 1000px)": {
@@ -93,7 +93,7 @@ const SellSlider = ({sliderTitle}:{sliderTitle ? : string}) => {
         {loaded && instanceRef.current && (
           <div className="absolute left-0 w-full top-0 flex items-center justify-between gap-5">
             <div className="flex items-center justify-center gap-10">
-              <h1 className="text-3xl font-bold">{sliderTitle || "Title"}</h1>
+              <h1 className="text-lg md:text-3xl font-bold">{sliderTitle || "Title"}</h1>
               <CountDown/>
             </div>
             <div className="flex items-center justify-center gap-5">
@@ -133,8 +133,8 @@ function Arrow(props : any) {
         props.left ? "arrow--left" : "arrow--right"
       } ${disabled}`}
     >
-      {props.left && <FaLongArrowAltLeft />}
-      {!props.left && <FaLongArrowAltRight />}
+      {props.left && <div className="bg-gray-200 h-10 w-10 rounded-full flex items-center justify-center p-2"><FaLongArrowAltLeft /></div>}
+      {!props.left && <div className="bg-gray-200 h-10 w-10 rounded-full flex items-center justify-center p-2"><FaLongArrowAltRight /></div>}
     </div>
   );
 }
