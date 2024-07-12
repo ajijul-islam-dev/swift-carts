@@ -16,7 +16,7 @@ const SellSlider = ({sliderTitle}:{sliderTitle ? : string}) => {
       loop: true,
       slides: {
         perView : 2,
-        spacing: 5,
+        spacing: 7,
       },
       initial: 0,
       slideChanged(slider) {
@@ -91,8 +91,8 @@ const SellSlider = ({sliderTitle}:{sliderTitle ? : string}) => {
         </div>
 
         {loaded && instanceRef.current && (
-          <div className="absolute left-0 w-full top-0 flex items-center justify-between gap-2 md:gap-5">
-            <div className="flex items-center justify-center gap-5 md:gap-10">
+          <div className="absolute left-0 w-full top-0 flex items-center justify-between">
+            <div className="flex items-center justify-center gap-2 md:gap-10">
               <h1 className="text-lg md:text-3xl font-bold">{sliderTitle || "Title"}</h1>
               <CountDown/>
             </div>

@@ -10,7 +10,7 @@ function ThisMonth() {
       <SectionTitle title="This Month" />
       <div className="flex items-center justify-between my-10">
         <h1 className="text-lg md:text-3xl font-bold">Best Selling Products</h1>
-        <Button size="lg" radius="none" color="danger">
+        <Button size="sm" radius="none" color="danger">
           View All
         </Button>
       </div>
