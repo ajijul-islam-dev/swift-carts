@@ -2,7 +2,8 @@
 import React from "react";
 import SectionTitle from "../Shared/SectionTitle";
 import { Button } from "@nextui-org/button";
-import ProductCard from "../ProductCard/ProductCard";
+import ProductCard from "../Shared/ProductCard";
+import AirPhone from "./AirPhone/AirPhone";
 
 function ThisMonth() {
   return (
@@ -23,6 +24,9 @@ function ThisMonth() {
         <ProductCard/>
         <ProductCard/>
         <ProductCard/>
+      </div>
+      <div className="">
+        <AirPhone/>
       </div>
     </div>
   );

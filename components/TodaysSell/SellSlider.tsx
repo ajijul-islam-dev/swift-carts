@@ -6,7 +6,7 @@ import { FaLongArrowAltLeft, FaLongArrowAltRight } from "react-icons/fa";
 
 
 import CountDown from "./CountDown";
-import ProductCard from "../ProductCard/ProductCard";
+import ProductCard from "../Shared/ProductCard";
 
 const SellSlider = ({sliderTitle}:{sliderTitle ? : string}) => {
   const [currentSlide, setCurrentSlide] = useState(0);

@@ -64,9 +64,11 @@ function Nav() {
             }
           />
 
-          <Badge>
-            <CiSearch className="text-2xl md:hidden" />
+     <div className="md:hidden">
+     <Badge>
+            <CiSearch />
           </Badge>
+     </div>
         </NavbarItem>
         <NavbarItem className="text-2xl">
           <Badge content="0" color="default">
