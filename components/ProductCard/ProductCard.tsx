@@ -18,28 +18,29 @@ const ProductCard = () => {
       onMouseLeave={() => setIsHover(false)}
     >
       <div className="relative bg-slate-100 p-7 md:p-5 flex justify-center items-center">
-        <div className="absolute text-sm md:text-2xl top-5 right-3 z-50 bg-white p-1 rounded-full">
-          <MdOutlineFavoriteBorder className="" />
+        <div className="absolute text-sm md:text-xl top-5 right-3 z-50 bg-white p-1 rounded-full">
+          <MdOutlineFavoriteBorder />
         </div>
-        <div className="absolute top-7 left-7 flex items-center justify-center">
-        <Badge color="danger">-20%</Badge>
+        <div className="absolute top-7 left-5 flex items-center justify-center">
+            <span className="bg-red-500 px-1 text-white text-xs">-20%</span>
         </div>
-        <div className="absolute md:text-2xl top-14 bg-white right-3 z-50 p-1 rounded-full">
+        <div className="absolute md:text-xl top-14 bg-white right-3 z-50 p-1 rounded-full">
           <FaRegEye />
         </div>
         <Image
           width="100"
           height={100}
           alt="card"
-          className={`md:w-[170px] md:h-[170px] w-[150px] h-[150px] pb-10 ${isHover && 'scale-125 duration-300'}`}
+          className={`md:w-[170px] md:h-[170px] w-[150px] h-[120px] md:pb-10`}
           src="/images/products/product.png"
         />
         {isHover && (
           <div className="absolute bottom-0 grid w-full">
             <Button
+            size="sm"
               variant="solid"
               radius="none"
-              className="bg-neutral-950 text-white w-full"
+              className="bg-neutral-950 text-white w-full p-0"
             >
               Add to Cart
             </Button>

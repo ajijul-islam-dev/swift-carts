@@ -10,7 +10,7 @@ const TodaysSell = () => {
         <section className='my-32'>
             <SectionTitle title="Today's"/>
             <div className="">
-                <SellSlider/>
+                <SellSlider sliderTitle='Flash Sales'/>
                 <Button className='mx-auto block' radius='none' variant='solid' color='danger'>View All Products</Button>
             </div>
         </section>

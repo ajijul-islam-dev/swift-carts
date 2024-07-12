@@ -1,7 +1,8 @@
 import Banner from "@/components/Banner/Banner";
+import Categories from "@/components/Categories/Categories";
+import ThisMonth from "@/components/ThisMonth/ThisMonth";
 import TodaysSell from "@/components/TodaysSell/TodaysSell";
-import { Button } from "@nextui-org/button";
-import Image from "next/image";
+
 
 export default function Home() {
   return (
@@ -11,6 +12,12 @@ export default function Home() {
       </section>
       <section>
         <TodaysSell/>
+      </section>
+      <section>
+        <Categories/>
+      </section>
+      <section>
+        <ThisMonth/>
       </section>
     </main>
   );
