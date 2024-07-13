@@ -29,7 +29,7 @@ function Nav() {
     <Navbar
       onMenuOpenChange={setIsMenuOpen}
       maxWidth="full"
-      className="md:px-10 shadow-md"
+      className="md:px-10 shadow-md fixed z-[9999]"
     >
       <NavbarContent>
         <NavbarMenuToggle
@@ -64,11 +64,11 @@ function Nav() {
             }
           />
 
-     <div className="md:hidden">
-     <Badge>
-            <CiSearch />
-          </Badge>
-     </div>
+          <div className="md:hidden">
+            <Badge>
+              <CiSearch />
+            </Badge>
+          </div>
         </NavbarItem>
         <NavbarItem className="text-2xl">
           <Badge content="0" color="default">
