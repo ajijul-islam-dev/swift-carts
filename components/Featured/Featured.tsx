@@ -10,7 +10,7 @@ function Featured() {
     <div className="my-20">
       <SectionTitle title="Featured" />
       <h1 className="text-lg md:text-3xl font-bold my-10">New Arrival</h1>
-      <div className="grid grid-cols-2 gap-0.5 md:gap-5">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
         <div className="bg-black md:p-10 relative" onMouseEnter={()=> setIsVisible(true)} onMouseLeave={()=> setIsVisible(false)}>
           <div
             className={`duration-300 absolute bottom-2 md:bottom-10 left-2 md:left-10 text-white ${
@@ -33,8 +33,8 @@ function Featured() {
             className="w-full h-full"
           />
         </div>
-        <div className="grid grid-cols-1 grid-rows-2 gap-0.5 md:gap-5">
-          <div className="relative" onMouseEnter={()=> setIsVisible(true)} onMouseLeave={()=> setIsVisible(false)}>
+        <div className="grid grid-cols-1 md:grid-rows-2 gap-5">
+          <div className=" bg-black relative" onMouseEnter={()=> setIsVisible(true)} onMouseLeave={()=> setIsVisible(false)}>
             <div
               className={`absolute bottom-2 md:bottom-10 left-2 md:left-10 text-white ${
                 isVisible ? "block" : "hidden"
@@ -56,7 +56,7 @@ function Featured() {
               className="w-full h-full"
             />
           </div>
-          <div className="grid grid-cols-2 gap-0.5 md:gap-5">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
             <div className="p-3 md:p-10 bg-black relative" onMouseEnter={()=> setIsVisible(true)} onMouseLeave={()=> setIsVisible(false)}>
               <div
                 className={`absolute bottom-2 md:bottom-10 left-2 md:left-10 text-white ${
