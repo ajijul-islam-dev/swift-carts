@@ -85,8 +85,8 @@ function Footer() {
           </div>
         </div>
       </div>
-      <hr />
-      <p className="text-center text-white my-4">
+  
+      <p className="text-center text-white py-4 border-t border-[rgba(255,255,255,0.2)]">
         Copyright Rimel 2022. All right reserved
       </p>
     </div>

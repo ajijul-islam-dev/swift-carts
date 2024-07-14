@@ -13,18 +13,18 @@ const ProductCard = () => {
   const [isHover, setIsHover] = useState(false);
   return (
     <div
-      className="border rounded md:p-2"
+      className=""
       onMouseEnter={() => setIsHover(true)}
       onMouseLeave={() => setIsHover(false)}
     >
       <div className="relative bg-slate-100 p-7 md:p-5 flex justify-center items-center">
-        <div className="absolute text-sm md:text-xl top-5 right-3 z-50 bg-white p-1 rounded-full">
+        <div className="absolute text-sm md:text-xl top-2 right-2 z-50 bg-white p-1 rounded-full">
           <MdOutlineFavoriteBorder />
         </div>
-        <div className="absolute top-7 left-5 flex items-center justify-center">
+        <div className="absolute top-2 left-2 flex items-center justify-center">
             <span className="bg-red-500 px-1 text-white text-xs">-20%</span>
         </div>
-        <div className="absolute md:text-xl top-14 bg-white right-3 z-50 p-1 rounded-full">
+        <div className="absolute md:text-xl top-10 bg-white right-2 z-50 p-1 rounded-full">
           <FaRegEye />
         </div>
         <Image
