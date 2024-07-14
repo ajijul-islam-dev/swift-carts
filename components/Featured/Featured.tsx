@@ -3,6 +3,7 @@ import React, { useState } from "react";
 import SectionTitle from "../Shared/SectionTitle";
 import Image from "next/image";
 import { Button } from "@nextui-org/button";
+import Services from "./Services";
 
 function Featured() {
   const [isVisible, setIsVisible] = useState(false);
@@ -103,7 +104,9 @@ function Featured() {
             </div>
           </div>
         </div>
+        
       </div>
+      <Services/>
     </div>
   );
 }

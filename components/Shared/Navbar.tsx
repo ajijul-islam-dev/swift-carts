@@ -65,9 +65,9 @@ function Nav() {
           />
 
           <div className="md:hidden">
-            <Badge>
+            <div className="mb-2">
               <CiSearch />
-            </Badge>
+            </div>
           </div>
         </NavbarItem>
         <NavbarItem className="text-2xl">
