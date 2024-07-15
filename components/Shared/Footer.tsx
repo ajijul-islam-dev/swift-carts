@@ -33,7 +33,7 @@ function Footer() {
           <p className="">exclusive@gmail.com</p>
           <p className="">+88015-88888-9999</p>
         </div>
-        <div className="text-white space-y-5">
+        <div className="text-white space-y-3">
           <h2 className="text-xl">Account</h2>
           <p>My Account</p>
           <p>Login/Register</p>
